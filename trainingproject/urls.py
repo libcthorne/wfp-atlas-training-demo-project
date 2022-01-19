@@ -23,9 +23,10 @@ from catalog.views import ProductViewSet
 router = routers.DefaultRouter()
 router.register(r'products', ProductViewSet)
 
+# [r]aw string
 
 urlpatterns = [
-    path('', include(router.urls)),
-    path('catalog/', include('catalog.urls')),
-    path('admin/', admin.site.urls),
+    path(r'', include(router.urls)),
+    path(r'catalog/', include('catalog.urls')),
+    path(r'admin/', admin.site.urls),
 ]
